@@ -177,8 +177,8 @@ export default function PLD({ navigation }: any) {
 							value={CurrentCarNumber}
 							onChangeText={setCurrentCarNumber}
 							placeholder="Ex: KAXX01XXXX"
-							testID="Parking-create-text-input"
 							autoCapitalize="characters"
+							testID="parking-drawingregistration-input"
 						/>
 
 						<View style={{ flexDirection: "row", marginTop: 20 }}>
@@ -190,7 +190,7 @@ export default function PLD({ navigation }: any) {
 							</View>
 
 							<View style={{ width: "60%", margin: 5 }}>
-								<Button title="Submit" onPress={handleNewCarRegistration} />
+								<Button title="Submit" onPress={handleNewCarRegistration} testID="parking-drawing-addcarbutton"/>
 							</View>
 						</View>
 					</View>

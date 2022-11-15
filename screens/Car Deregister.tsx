@@ -49,7 +49,7 @@ export default function Checkout({ navigation, route }: any) {
 				<Button
 					title="Go Back"
 					onPress={() => navigation.goBack()}
-					testID="Parking-create-submitbutton"
+					testID="deregister-back-button"
 				/>
 			</View>
 
@@ -61,16 +61,16 @@ export default function Checkout({ navigation, route }: any) {
 
 				<View style={styles.boxText}>
 					<Text style={{ fontWeight: "bold" }}>Time Spent:</Text>
-					<Text>{TotalHours}</Text>
+					<Text testID="deregister-time-spent">{TotalHours}</Text>
 				</View>
 
 				<View style={styles.boxText}>
 					<Text style={{ fontWeight: "bold" }}>Parking Charges:</Text>
-					<Text>{`\$ ${TotalPrice}`}</Text>
+					<Text testID="deregister-charge">{`\$ ${TotalPrice}`}</Text>
 				</View>
 			</View>
 
-			<Button title="Payment Taken" onPress={handlePayment} />
+			<Button title="Payment Taken" onPress={handlePayment} testID="deregister-paymentbutton"/>
 		</SafeAreaView>
 	);
 }

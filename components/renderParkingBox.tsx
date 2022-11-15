@@ -17,12 +17,16 @@ export default function ParkingBox(props: Props) {
 
 	if (!item.carNo) {
 		return (
-			<View style={styles.container}>
+			<View
+				style={styles.container}
+				testID={`parking-drawing-spacenumber-${index}`}
+			>
 				<View
 					style={[
 						styles.carTextBox,
 						{ backgroundColor: "#fff", borderColor: "green" },
 					]}
+					testID={`parking-drawing-space-${index}`}
 				>
 					<Text style={[styles.carText, { color: "#000" }]}>{index + 1}</Text>
 				</View>
@@ -36,9 +40,12 @@ export default function ParkingBox(props: Props) {
 			onPress={() => {
 				navigation.navigate("checkout", item);
 			}}
+			testID={`parking-drawing-spacenumber-${index}`}
 		>
-			{/* <Text>{item.time && timeDifference(item.time)}</Text> */}
-			<View style={styles.carTextBox}>
+			<View
+				style={styles.carTextBox}
+				testID={`parking-drawingregistered-${index}`}
+			>
 				<Text style={styles.carText}>{index + 1}</Text>
 				<Text style={styles.carText}>{item.carNo}</Text>
 				<Text style={[styles.carText, { fontSize: 10 }]}>{`Tap to checkout ${
